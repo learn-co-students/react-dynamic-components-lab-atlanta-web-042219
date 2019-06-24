@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+- stable
+cache:
+  directories:
+  - node_modules
+script:
+- npm run build
+deploy:
+  provider: heroku
+  app: colorbox-dynamicapp
+  api_key:
+    secure: muLlwIeE+QzMn+Vm1cPgwJFEy0EcONg4CTasHaZ+NwkRqj1wqIsLoJ6LJhm0e+higVLj90jO/wwrfGhYfLdl8pZz1ENVxotUTr1B+VTNILoVVtv4IssYJBQMWkgutSXHMQ+Y67KyVFvFLhG5+2RsO54kDSq/UXXoV9m81SrLI35wMUHDeuyIlAaKGkFlDFRXQOYjK8G7bKVOXh+viMc+DhadjNAv2LEIO0EOpXnrJSMwlmph2ruAKx3U9WazYFwpxMv6UOzlj3HFBNnFrredYVetT/Jmyprr8gecRhdPzyMzQf2avmHMxZ2BDeEw8n2ev3ppokE4XIW6EeDettxJKDaOglAnmPBK1kmyYzxDwukhssDj13m4ZJZ5p1b/WVOfYN5T83vYv8NYipOeRT5maEgMVMgdjnGOfZewnD2NHjjlRotLriRoTgI1BRtAg65ktb6SEM0rqE5A7Yf5scSUhD6sQNP78QsJEDlXFfN9q9kJeSTtASyUpXyrOkeQWHWbZOMs6FZOUw4vAcrg5R3E8IjqvXcpC/NBY2teL9JKVDH/oh+7TlfpMObozmkdetAHcofqz3BB+u4zuEqbqb4HRZVZlwH6xeYQuO88E6dW5BJYyjOy+uM4RL4v/A7i1BssYWkefHEX2ellmYB76MWsDRg2zZ21Fzg2BQaSC/Tnmas=
+  on: master
